@@ -3,7 +3,9 @@
     <mainHeader class="header"></mainHeader>
     <div class="container" v-if="!isIndex">
       <sideNav class="nav"></sideNav>
-      <router-view class="view page-container"></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view class="view page-container"></router-view>
+      </transition>
     </div>
     <router-view class="page" v-else></router-view>
     <!-- <mainFooter v-if="!isIndex"></mainFooter> -->
@@ -71,6 +73,18 @@ export default {
       margin: 20px 0;
       box-sizing: border-box;
     }
+  }
+  .page {
+    flex: 1;
+  }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.2s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
   }
 }
 </style>

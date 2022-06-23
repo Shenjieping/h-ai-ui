@@ -9,7 +9,7 @@
         <a
           target="_blank"
           class="btn-github"
-          href="https://github.com/Shenjieping/shui"
+          href="https://github.com/Shenjieping/h-ai-ui"
           >GitHub</a
         >
       </div>

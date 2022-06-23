@@ -52,6 +52,12 @@ fs.mkdirSync(resolve(`./packages/${name}/src`))
 fs.writeFileSync(resolve(`./packages/${name}/src/${name}.vue`), templateStr)
 fs.writeFileSync(resolve(`./packages/${name}/index.js`), indexStr)
 
+const cssIndex = fs.readFileSync(resolve('./packages/theme-chalk/src/index.scss'), 'utf-8')
+const addCss = `@import "./${name}.scss";`
+fs.writeFileSync(resolve(`./packages/theme-chalk/src/${name}.scss`), `.${name} {}`)
+fs.writeFileSync(resolve(`./packages/theme-chalk/src/index.scss`), `${cssIndex}\n${addCss}`)
+
+
 // 预览注册
 const docStr =
 `# ${name} 组件
