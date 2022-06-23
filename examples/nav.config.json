@@ -1,0 +1,31 @@
+{
+  "开发指南": [
+    {
+      "name": "guid",
+      "path": "/guid",
+      "desc": "介绍"
+    },
+    {
+      "name": "install",
+      "path": "/install",
+      "desc": "安装"
+    }
+  ],
+  "基础组件": [
+    {
+      "desc": "Text 文本",
+      "name": "text",
+      "path": "/text"
+    },
+    {
+      "desc": "Button 按钮",
+      "name": "button",
+      "path": "/button"
+    },
+    {
+      "desc": "Alert 组件",
+      "name": "alert",
+      "path": "/alert"
+    }
+  ]
+}
