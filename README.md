@@ -1,28 +1,43 @@
-# h-itmg-ui
+# h-ai-ui
 
 ## Project setup
 ```
-yarn install
+npm install or yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 启动
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+npm run serve or yarn serve
 ```
 
-### Run your unit tests
+### 构建组件包
 ```
-yarn test:unit
+npm run build or yarn build
 ```
 
-### Lints and fixes files
+### 构建umd包
 ```
-yarn lint
+npm run build:umd or yarn build:umd
+```
+
+### 工具函数打包
+```
+npm run build:utils or yarn build:utils
+```
+
+### 静态文档部署打包
+```
+npm run build:deploy or yarn build:deploy
+```
+
+### 样式构建
+
+```
+cd packages/theme-chalk
+
+npm install
+
+npm run build
 ```
 
 ### Customize configuration
