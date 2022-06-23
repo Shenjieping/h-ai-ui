@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:file": "vue-cli-service build",
     "build:theme": "node build",
     "build:utils": "babel src --out-dir lib --ignore src/index.js",
+    "build:deploy": "cross-env BUILD_TYPE=deploy vue-cli-service build",
     "build:umd": "vue-cli-service build --target lib --name aiui --dest lib packages/index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"

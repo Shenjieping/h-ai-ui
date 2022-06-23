@@ -36,6 +36,7 @@ const devConfig = {
       filename: 'index.html' // 输出文件
     }
   },
+  outputDir: 'dist',
   lintOnSave: false,
   devServer: {
     overlay: {
@@ -124,5 +125,6 @@ const buildConfig = {
   outputDir: 'lib',
   productionSourceMap: false
 }
-
-module.exports = process.env.NODE_ENV === 'development' ? devConfig : buildConfig
+const node_env = process.env.NODE_ENV
+const build_type = process.env.BUILD_TYPE
+module.exports = node_env === 'development' || build_type === 'deploy' ? devConfig : buildConfig
