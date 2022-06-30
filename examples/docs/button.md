@@ -6,8 +6,10 @@
 
 :::demo 使用 `type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
 ```html
-<ai-button type="success">成功按钮</ai-button>
-<ai-button type="warning">警告按钮</ai-button>
+<template>
+  <ai-button type="success">成功按钮</ai-button>
+  <ai-button type="warning">警告按钮</ai-button>
+</template>
 ```
 :::
 

@@ -67,9 +67,17 @@ const docStr =
 
 :::demo
 \`\`\`html
-<ai-${name}></ai-${name}>
+<template>
+  <ai-${name}></ai-${name}>
+</template>
 \`\`\`
 :::
+
+## Attributes
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| 文档     |  -  |  -  |     -          |    —     |
+
 `
 fs.writeFileSync(resolve(`./examples/docs/${name}.md`), docStr)
 

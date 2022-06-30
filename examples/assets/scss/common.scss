@@ -107,7 +107,7 @@ code, kbd, pre, samp {
     margin: 5px 0;
   }
 
-  .tip {
+  > .tip {
     padding: 8px 16px;
     background-color: #ECF8FF;
     border-radius: 4px;
@@ -120,7 +120,7 @@ code, kbd, pre, samp {
     }
   }
 
-  .warning {
+  > .warning {
     padding: 8px 16px;
     background-color: #fff6f7;
     border-radius: 4px;

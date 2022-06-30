@@ -26,6 +26,11 @@
       "desc": "Alert 组件",
       "name": "alert",
       "path": "/alert"
+    },
+    {
+      "desc": "Table 组件",
+      "name": "table",
+      "path": "/table"
     }
   ]
 }

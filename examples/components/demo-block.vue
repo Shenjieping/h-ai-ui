@@ -112,7 +112,7 @@ export default {
     max-height: 200px;
   }
 }
-.element-doc table {
+.element-doc > table {
   border-collapse: collapse;
   width: 100%;
   background-color: #fff;

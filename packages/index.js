@@ -1,12 +1,14 @@
 import Text from './text/index.js'
 import Button from './button/index.js'
 import Alert from './alert/index.js'
+import Table from './table/index.js'
 /* import component */
 
 const components = [
   Text,
   Button,
-  Alert
+  Alert,
+  Table
   /* install component */
 ]
 
