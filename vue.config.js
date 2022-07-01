@@ -74,7 +74,7 @@ const devConfig = {
       .end()
       .use('vue-markdown-loader')
       .loader('vue-markdown-loader/lib/markdown-compiler')
-      .loader(resolve('./md-loader/index.js')) // 参考element-ui的md处理 https://github.com/ElemeFE/element/blob/HEAD/build/md-loader/index.js
+      .loader(resolve('./build/md-loader/index.js')) // 参考element-ui的md处理 https://github.com/ElemeFE/element/blob/HEAD/build/md-loader/index.js
   }
 };
 

@@ -1,6 +1,7 @@
 /*
   自动生成组件
-  在根目录下执行执行  node create.js componentName
+  在根目录下执行执行  node build/createComponent.js componentName
+  或者执行 npm run create componentName
 */
 const path = require('path')
 const fs = require('fs')
@@ -18,6 +19,8 @@ if (~packagesFiles.indexOf(name)) {
   console.log('该组件已经存在，停止创建！')
   return
 }
+
+console.log(`开始创建 ${name} 组件！`)
 
 // 组件创建
 const upperName = name.replace(/^[a-z]/, (str) => str.toLocaleUpperCase())
@@ -53,7 +56,7 @@ fs.writeFileSync(resolve(`./packages/${name}/src/${name}.vue`), templateStr)
 fs.writeFileSync(resolve(`./packages/${name}/index.js`), indexStr)
 
 const cssIndex = fs.readFileSync(resolve('./packages/theme-chalk/src/index.scss'), 'utf-8')
-const addCss = `@import "./${name}.scss";`
+const addCss = `@import "./Ai${upperName}.scss";`
 fs.writeFileSync(resolve(`./packages/theme-chalk/src/${name}.scss`), `.${name} {}`)
 fs.writeFileSync(resolve(`./packages/theme-chalk/src/index.scss`), `${cssIndex}\n${addCss}`)
 
@@ -102,4 +105,4 @@ const addImport = `${packagesIndex.split(importTag)[0]}${importStr}\n${importTag
 const addName = `${addImport.split(nameTag)[0]},\n  ${upperName}${nameTag}${addImport.split(nameTag)[1]}`
 fs.writeFileSync(resolve('./packages/index.js'), addName)
 
-console.log('创建成功')
+console.log(`创建 ${name} 组件成功！`)
